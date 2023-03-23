@@ -1,0 +1,29 @@
+version: '3'
+services:
+  frontend:
+    build: ./front-end
+    ports:
+      - "8051:8051"
+    container_name: front
+    depends_on:
+      - backend
+  backend:
+    build: ./back-end
+    ports:
+      - "4021:4021"
+    container_name: back
+    depends_on:
+      - database
+    environment:
+      MONGO_INITDB_DATABASE: myapp
+    volumes:
+      - db-data:/data/db
+  database:
+    image: mongo:4.4
+    ports:
+      - "27017:27017"
+    container_name: mongo
+    volumes:
+      - db-data:/data/db
+volumes:
+  db-data: 

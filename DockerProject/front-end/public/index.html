@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Registre Form</title>
+
+    <style>
+		body {
+			background-color: #f2f2f2;
+			font-family: Arial, sans-serif;
+			color: #333;
+			margin: 0;
+			padding: 0;
+		}
+		h1 {
+			text-align: center;
+			margin-top: 50px;
+			color: #007bff;
+		}
+		form {
+			background-color: #fff;
+			padding: 20px;
+			border-radius: 5px;
+			box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+			margin: 50px auto;
+			width: 50%;
+		}
+		label {
+			display: block;
+			margin-bottom: 10px;
+			font-weight: bold;
+		}
+		input[type="text"] {
+			width: 90%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+        input[type="email"] {
+			width: 90%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+        input[type="password"] {
+			width: 90%;
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			margin-bottom: 20px;
+		}
+		input[type="submit"] {
+			background-color: #007bff;
+			color: #fff;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			margin-right: 10px;
+		}
+		button {
+			background-color: #007bff;
+			color: #fff;
+			border: 1px solid #007bff;
+			padding: 10px 20px;
+			border-radius: 5px;
+			cursor: pointer;
+		}
+		button:hover {
+			background-color: #007bff;
+			color: #fff;
+		}
+	</style>
+</head>
+
+<body>
+   
+    <h1>Entrez votre adresse e-mail et votre mot de passe:</h1>
+    <form method="post" action="/submit">
+      <label for="email">Adresse e-mail:</label>
+      <input type="email" id="email" name="email"><br><br>
+      <label for="password">Mot de passe:</label>
+      <input type="password" id="password" name="password"><br><br>
+      <input type="submit" value="submit">
+    </form>
+</body>
+
+</html>
